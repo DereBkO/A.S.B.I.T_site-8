@@ -1,0 +1,103 @@
+.promo
+	position: relative
+	min-height: 880px
+
+.promo__content
+	position: relative
+	z-index: 1
+	height: 100%
+
+.promo__title
+	display: block
+	margin: 41px auto 0 auto
+	width: 865px
+	font-family: Montserrat
+	font-weight: 600
+	font-size: 44px
+	line-height: 140%
+	text-align: center
+	color: #1A1B24
+
+.promo__subtitle
+	margin-top: 20px
+	font-family: Montserrat
+	font-weight: 400
+	font-size: 16px
+	line-height: 140%
+	text-align: center
+	color: #1A1B24
+
+.promo__button
+	display: flex
+	justify-content: center
+	margin-top: 40px
+
+.promo_btn
+	width: 223px
+	height: 58px
+	background: linear-gradient(94.73deg, #60B7FF 0%, #E255F3 100%)
+	box-shadow: 0px 20px 40px rgba(226, 85, 243, 0.3)
+	border-radius: 40px
+	cursor: pointer
+	font-family: Montserrat
+	font-weight: 600
+	font-size: 16px
+	line-height: 140%
+	color: #FFFFFF
+	transition: all 0.5s
+	&:hover
+		background: linear-gradient(94.73deg, #8CCBFF 0%, #EF73FF 100%)
+		box-shadow: 0px 20px 40px rgba(226, 85, 243, 0.6)
+
+
+
+/* =======================  Анимация линий  ====================== */
+.main
+	position: absolute
+	top: 0
+	z-index: 0
+	width: 100%
+	height: 700px
+	user-select: none
+
+/* ---- particles.js container ---- */
+#particles-js
+	position: absolute
+	width: 100%
+	height: 100%
+	background-color: #ffffff
+	background-image: url("@img/img/main.png")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+
+/* ---- stats.js ---- */
+.count-particles
+	position: absolute
+	top: 48px
+	left: 0
+	width: 80px
+	font-size: .8em
+	text-align: left
+	text-indent: 4px
+	line-height: 14px
+	padding-bottom: 2px
+	font-family: Helvetica, Arial, sans-serif
+	font-weight: bold
+
+.js-count-particles
+	font-size: 1.1em
+
+#stats, .count-particles
+	-webkit-user-select: none
+	margin-top: 5px
+	margin-left: 5px
+
+#stats
+	border-radius: 3px 3px 0 0
+	overflow: hidden
+
+.count-particles
+	border-radius: 0 0 3px 3px
+
+// @media (max-width: 453px)

@@ -1,0 +1,77 @@
+.earnings
+	margin-top: 73px
+
+.earnings__title
+	font-family: Montserrat
+	font-weight: 600
+	font-size: 34px
+	line-height: 140%
+	color: #1B1B22
+	text-align: center
+	span
+		background: linear-gradient(94.73deg, #60B7FF 0%, #E255F3 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		background-clip: text
+		text-fill-color: transparent
+
+.earnings__block
+	display: flex
+	justify-content: space-between
+	margin-top: 81px
+
+.earnings__item
+	position: relative
+	padding: 46px 31px 34px 30px
+	width: 386px
+	height: 124px
+	background: linear-gradient(180deg, #F6F9FD 0%, #F1F5FA 100%)
+	border-radius: 30px
+
+.earnings__round
+	position: absolute
+	width: 52px
+	height: 52px
+	top: -26px
+	left: 30px
+	background: linear-gradient(180deg, #6989FE 0%, #3C64F4 100%)
+	border-radius: 50%
+	filter: drop-shadow(0px 10px 30px rgba(17, 17, 255, 0.3))
+	&-1
+		&::before
+			content: ''
+			width: 7px
+			height: 18px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			background: url('@img/icons/earnings/1.svg')
+	&-2
+		&::before
+			content: ''
+			width: 14px
+			height: 18px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			background: url('@img/icons/earnings/2.svg')
+	&-3
+		&::before
+			content: ''
+			width: 14px
+			height: 18px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			background: url('@img/icons/earnings/3.svg')
+
+	
+.earnings__text
+	font-family: Montserrat
+	font-weight: 400
+	font-size: 16px
+	line-height: 140%
+	color: #1B1B22

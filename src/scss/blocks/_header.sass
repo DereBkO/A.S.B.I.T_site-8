@@ -1,0 +1,299 @@
+$mainColor: #f15412
+$secondaryColor: #34b3f1
+	
+/*--------------------  Шапка  --------------------*/
+.header
+	position: relative
+	padding: 20px 30px 0 30px
+	display: flex
+	justify-content: space-between
+	z-index: 100
+	&__logo
+		position: relative
+		width: 151px
+		height: 120px
+		z-index: 101
+		.logo
+			max-width: 100%
+			transform: scale(1.015)
+		&:hover
+			.logo
+				opacity: 0
+			&::before
+				content: ''
+				width: 151px
+				height: 120px
+				position: absolute
+				transition: all 0.5s ease 0s
+				top: 0
+				left: 0
+				z-index: 10
+				background: url('@img/icons/header/logo_grad.svg') center (center / cover) no-repeat
+
+
+
+
+
+
+/*--------------------  Меню  --------------------*/
+
+.menu
+	padding-left: 50px
+	// .menu__icon
+	&__icon
+		display: none
+
+	&__social
+		display: flex
+		justify-content: flex-end
+		margin-top: 1px
+	
+	&__soclink
+		position: relative
+		z-index: 101
+		margin-right: 20px
+		&:nth-child(4)
+			margin-right: 0
+	
+	&__header
+		display: flex
+		margin-top: 30px
+		align-items: center
+		
+	// .menu__list
+	&__list
+		list-style-type: none
+		display: flex
+		gap: 50px
+			
+	// .menu__link
+	&__link
+		display: block
+		color: #080f4d
+		text-decoration: none
+		font-family: Montserrat
+		font-weight: 500
+		font-size: 16px
+		line-height: 140%
+		position: relative
+		&::before
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			bottom: -4px
+			background-color: #2b66ff
+			display: block
+			content: ''
+			height: 2px
+			width: 0%
+			transition: width 0.3s ease-in-out
+		&:hover
+			color: #1111ff
+			&::before
+				width: 100%
+		&:focus
+			&::before
+				width: 100%
+
+	&__btn
+		position: relative
+		z-index: 101
+		margin-left: 50px
+		width: 171px
+		height: 46px
+		background: linear-gradient(94.73deg, #60b7ff 0%, #e255f3 100%)
+		border-radius: 40px
+		cursor: pointer
+		a
+			color: #fff
+			font-family: Montserrat
+			font-weight: 600
+			font-size: 16px
+			line-height: 140%
+
+
+.email
+	margin-left: 92px
+	display: flex
+	align-items: center
+	font-family: Montserrat
+	font-weight: 500
+	font-size: 14px
+	line-height: 140%
+	color: #080F4D
+	&:last-child
+		margin-left: 30px
+	img
+		margin-right: 14px
+
+
+
+
+
+/* -------------------  Размеры экрана  ------------------- */
+
+@media (max-width: 1134px)
+	.menu__list
+		gap: 28px
+
+@media (max-width: 1024px)
+	.header
+		&__logo
+			width: 100px
+			height: auto
+			img
+				max-width: 100%
+			&:hover
+				&::before
+					width: 102px
+					height: 80px
+	.menu
+		display: flex
+		align-items: center
+		&__icon
+			display: block
+			width: 27px
+			height: 20px
+			position: relative
+			z-index: 5
+			cursor: pointer
+			span
+				position: absolute
+				top: calc(50% - 1px)
+				left: 0
+				width: 100%
+				height: 2px
+				background-color: #080F4D
+				transition: all 0.2s
+				&:first-child
+					top: 0
+				&:last-child
+					top: auto
+					bottom: 0
+			&.active
+				z-index: 102
+				span
+					transform: scale(0)
+					&:first-child
+						transform: rotate(-45deg)
+						top: calc(50% - 1px)
+					&:last-child
+						transform: rotate(45deg)
+						bottom: calc(50% - 1px)
+
+		// .menu__body
+
+		&__body
+			position: absolute
+			top: 0
+			right: 0
+			height: 100vh
+			width: 100%
+			// display: flex
+			transition: all 0.2s
+			&.active
+				z-index: 102
+				background-color: rgba(27, 27, 27, 0.2)
+				right: 0
+				.menu__list
+					right: 0
+
+		// .menu__item
+
+		&__item
+			&_1
+				width: 66px
+			&_2
+				width: 103px
+			&_3
+				width: 30px
+			&_4
+				width: 48px
+			&_5
+				width: 74px
+			&_6
+				width: 80px
+
+		// .menu__list
+		
+		&__list
+			position: absolute
+			right: -100%
+			flex-direction: column
+			padding: 88px 0 24px 20px
+			gap: 0
+			height: 100%
+			width: 30%
+			background-color: #fff
+			overflow: auto
+			transition: all 0.4s
+
+		// .menu__link
+		
+		&__link
+			display: block
+			margin-bottom: 26px
+			&.last__link
+				margin-bottom: 52px
+
+		
+		// .menu__header
+		&__header
+			margin-top: 0
+
+		&__btn
+			width: 156px
+			height: 44px
+			margin-left: 60px
+			margin-right: 60px
+			a
+				font-size: 14px
+
+	.email
+		margin-left: 0
+		display: block
+		&:last-child
+			margin-left: 0
+		&.top__email
+			margin-bottom: 10px
+		img
+			display: none
+
+@media (max-width: 992px)
+	.menu__list
+		width: 40%
+
+@media (max-width: 768px)
+	.menu__list
+		width: 50%
+
+@media (max-width: 669px)
+	.menu__social
+		justify-content: flex-start
+		margin-bottom: 26px
+
+@media (max-width: 513px)
+	.menu__list
+		width: 60%
+	.menu__btn
+		margin-left: 0
+
+@media (max-width: 453px)
+	.header
+		padding: 11px 10px 0 10px
+	.header__logo
+		width: 75px
+		&:hover
+			&::before
+				width: 75px
+				height: 60px
+	.menu
+		display: block
+		margin-top: 10px
+	.menu__list
+		padding: 60px 0 24px 20px
+		width: 70%
+	.menu__btn
+		padding: 12px 24px 12px 24px
+		margin-right: 0
+		margin-top: 26px

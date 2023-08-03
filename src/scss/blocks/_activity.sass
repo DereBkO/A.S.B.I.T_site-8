@@ -1,0 +1,85 @@
+.activity
+	position: relative
+	margin-top: 43px
+	min-height: 840px
+	&::before
+		content: ''
+		width: 2372px
+		height: 1247px
+		position: absolute
+		top: -59px
+		left: 50%
+		transform: translateX(-50%)
+		background: url('@img/icons/activity/wave.svg')
+
+.activity__content
+	position: relative
+	z-index: 1
+	display: flex
+	justify-content: center
+	img
+		position: relative
+		top: 82px
+		left: -27px
+
+.activity__block
+	position: relative
+	margin-top: 276px
+	margin-left: 12px
+	left: -27px
+
+.activity__title
+	font-family: Montserrat
+	font-weight: 600
+	font-size: 34px
+	line-height: 140%
+	color: #FFFFFF
+
+.activity__descr
+	margin-top: 10px
+	font-family: Montserrat
+	font-weight: 400
+	font-size: 16px
+	line-height: 148%
+	color: #FFFFFF
+
+.activity__paragraph
+	margin-top: 52px
+	margin-left: 64px
+	font-family: Montserrat
+	font-weight: 400
+	font-size: 16px
+	line-height: 148%
+	color: #FFFFFF
+	span
+		font-family: Montserrat
+		font-weight: 600
+		font-size: 16px
+		line-height: 148%
+		color: #FFFFFF
+	&:last-child
+		margin-top: 40px
+
+.trade
+	position: relative
+	&::before
+		content: ''
+		width: 108px
+		height: 108px
+		position: absolute
+		top: 50%
+		left: -94px
+		transform: translateY(-50%)
+		background: url('@img/icons/activity/trade.png') center (center / cover) no-repeat
+
+.mining
+	position: relative
+	&::before
+		content: ''
+		width: 108px
+		height: 108px
+		position: absolute
+		top: 50%
+		left: -94px
+		transform: translateY(-50%)
+		background: url('@img/icons/activity/mining.png') center (center / cover) no-repeat

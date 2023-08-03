@@ -1,0 +1,85 @@
+.work
+	margin-top: 100px
+
+.work__content
+	position: relative
+	display: flex
+	justify-content: space-between
+	&::before
+		content: ''
+		width: 159px
+		height: 159px
+		position: absolute
+		top: -124px
+		left: -179px
+		z-index: 0
+		background: url('@img/icons/work/round-mini.png')
+	&::after
+		content: ''
+		width: 258px
+		height: 258px
+		position: absolute
+		bottom: -182px
+		right: -202px
+		background: url('@img/icons/work/round-big.png')
+
+.work__title
+	margin-top: 55px
+	font-family: Montserrat
+	font-weight: 600
+	font-size: 34px
+	line-height: 140%
+	color: #1B1B22
+
+.work__subtitle
+	margin-top: 10px
+	font-family: Montserrat
+	font-weight: 400
+	font-size: 16px
+	line-height: 140%
+	color: #1B1B22
+
+.work__list
+	margin-top: 46px
+
+.work__descr
+	display: flex
+	padding-bottom: 50px
+	padding-left: 1px
+	&:last-child
+		padding-bottom: 0
+
+.work__text
+	font-family: Montserrat
+	font-weight: 400
+	font-size: 16px
+	line-height: 140%
+	color: #1B1B22
+	width: 432px
+	a
+		text-decoration: underline
+
+.number_1, .number_2, .number_3
+	span
+		font-family: Montserrat
+		font-weight: 600
+		font-size: 40px
+		line-height: 140%
+		background: linear-gradient(94.73deg, #60B7FF 0%, #E255F3 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		background-clip: text
+		text-fill-color: transparent
+
+.number_1
+	span
+		margin-right: 39px
+
+.number_2
+	span
+		margin-right: 30px
+
+.number_3
+	span
+		margin-right: 31px
+	

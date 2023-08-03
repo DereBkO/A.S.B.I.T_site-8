@@ -1,0 +1,134 @@
+/* ====================  Slider  ============================ */
+
+.slider_swiper
+	position: relative
+	margin: 77px auto 0 auto
+	width: 1246px
+	height: 370px
+
+.swiper
+	width: 1202px
+	box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.08)
+	background-color: rgba(77, 77, 77, 0.05)
+	border-radius: 40px
+	height: 100%
+
+.swiper-slide
+	position: relative
+	perspective: 200rem
+	width: 386px
+	height: 340px
+	margin-top: 15px
+	.slide
+		width: 100%
+		height: 100%
+		transition: all 0.8s ease
+		position: absolute
+		top: 0
+		left: 0
+		backface-visibility: hidden
+		border-radius: 20px
+		overflow: hidden
+		box-sizing: border-box
+		&-front
+			background-color: #fff
+			img
+				margin: 26px auto 0 auto
+				display: block
+		&-back
+			background-color: #1111ff
+			transform: rotateY(180deg)
+			img
+				margin: 56px auto 0 auto
+				display: block
+	&:hover .slide-back
+		transform: rotateY(0)
+	&:hover .slide-front
+		transform: rotateY(-180deg)
+
+.procent
+	margin-top: 10px
+	font-family: Montserrat
+	font-weight: 600
+	font-size: 34px
+	line-height: 140%
+	color: #1111FF
+	text-align: center
+
+.day
+	font-family: Montserrat
+	font-weight: 600
+	font-size: 16px
+	line-height: 140%
+	color: #080F4D
+	text-align: center
+
+.descr
+	display: block
+	margin: 16px auto 0 auto
+	width: 346px
+	font-family: Montserrat
+	font-weight: 400
+	font-size: 16px
+	line-height: 140%
+	text-align: center
+	color: #1A1B24
+
+.depozit
+	margin-top: 14px
+	font-weight: 400
+	font-size: 16px
+	line-height: 140%
+	text-align: center
+	color: #fff
+	span
+		font-weight: 600
+
+.nextAr
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	right: 0
+	width: 44px
+	height: 44px
+	background: #1111FF
+	border-radius: 100%
+	z-index: 1
+	cursor: pointer
+	&::before
+		content: ''
+		position: relative
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		display: block
+		width: 9px
+		height: 16px
+		background: url('@img/icons/slider/ar-right.svg') center (center / cover) no-repeat
+
+.prevAr
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	width: 44px
+	height: 44px
+	background: #1111FF
+	border-radius: 100%
+	z-index: 1
+	cursor: pointer
+	&::before
+		content: ''
+		position: relative
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		display: block
+		width: 9px
+		height: 16px
+		background: url('@img/icons/slider/ar-left.svg') center (center / cover) no-repeat
+
+@media (max-width: 1306px)
+	.slider_swiper
+		width: 1202px
+	.swiper
+		width: 1158px
